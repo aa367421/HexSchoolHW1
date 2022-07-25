@@ -1,0 +1,405 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+*{
+    box-sizing: border-box;
+    font-family: Microsoft JhengHei;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    padding: 10px 10px 0px 10px;
+}
+
+.socialMedia{
+    background-color:#f6f6f6;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.socialMedia .fb{
+    color: #4460a0;
+    background-image: url(../img/facebookIcon.png);
+    background-repeat: no-repeat;
+    text-indent: 30%;
+    min-width: 80px;
+    border-right: solid 2px #cccccc;
+    margin-right: 10px;
+}
+
+.socialMedia .twitter{
+    color: #00aaec;
+    background-image: url(../img/twitterIcon.png);
+    background-repeat: no-repeat;
+    text-indent: 20%;
+    min-width: 80px;
+}
+
+.logoAndMenu{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo h1 a{
+    display: block;
+    width: 224px;
+    height: 50px;
+    background-image: url(../img/logo.png);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul li{
+    min-width: 100px;
+    text-align: center;
+    margin-left: 10px;
+    box-sizing: content-box;
+    border-bottom: solid 5px #FFF;
+}
+
+.menu ul li a{
+    color: #00cc99;
+    line-height: 50px;
+}
+
+.menu ul li:hover{
+    border-bottom: solid 5px #00cc99;
+}
+
+@media only screen and (max-width: 667px) {
+    .socialMedia{
+        justify-content: center;
+    }
+
+    .logoAndMenu{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+    
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner{
+    margin-bottom: 40px;
+}
+
+.intro ul{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.intro ul li{
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+    box-shadow: 0px 3px 5px #dbdbdb;
+    padding:25px 20px;
+    
+}
+
+@media only screen and (max-width: 667px) {
+    .intro ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro ul li{
+        width: 85%;
+    }
+}
+
+.introImg{
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.introDescription h2{
+    display: flex;;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+.introDescription p{
+    line-height: 24px;
+}
+
+.jQuery p {
+    margin-left: -10%;
+}
+
+.onlineVsOffline{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+}
+
+.onlineVsOffline h2{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    line-height: 70px;
+}
+
+.tableTitle{
+    background-color: #f7f7f7;
+    font-weight: bolder;
+    border-top: solid 1px #dddddd;
+}
+
+td{
+    font-size: 16px;
+    line-height: 40px;
+    border-bottom: solid 1px #dddddd;
+}
+
+.green{
+    color: #00cc99;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    background: linear-gradient(#00644b,#009872);
+    padding: 30px;
+}
+
+.form h2{
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+    color:#FFF;
+    margin-bottom: 30px;
+}
+
+.form .information{
+    display: flex;
+    width: 100%;
+    color:#FFF;
+}
+
+#introdution{
+    width: 50%;
+    min-height: 50%;
+    margin-right: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    border: none;
+    border-radius: 3px;
+}
+
+#introdution:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+.form .information .formControl{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 24px;
+}
+
+.form .information .formControl input{
+    width: 100%;
+    margin-bottom: 20px;
+    line-height: 24px;
+    border: none;
+    border-radius: 3px;
+}
+
+.form .information .formControl input:focus{
+    outline: none;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+.form .information .formControl .btnSubmit{
+    width: 100px;
+    position: relative;
+    left: 78%;
+    margin-bottom: unset;
+    color:#FFF;
+    font-size: 18px;
+    background-color: #00cc99;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.form .information .formControl .btnSubmit:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #00cc99;
+}
+
+@media only screen and (max-width: 667px) {
+    .form .information{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #introdution{
+        width: 75%;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .form .information .formControl{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    .form .information .formControl{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        line-height: 24px;
+    }
+
+    .form .information .formControl input{
+        width: 100%;
+        line-height: 24px;
+    }
+
+    .form .information .formControl .btnSubmit{
+        position: unset;
+    }
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footerLogo a{
+    width: 171px;
+    height: 36px;
+    background-image: url(../img/footerLogo.png);
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.contactUs{
+    line-height: 24px;
+}
+
+.magenta{
+    color: #e12d80;
+}
+
+@media only screen and (max-width: 667px) {
+    .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .contactUs{
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}

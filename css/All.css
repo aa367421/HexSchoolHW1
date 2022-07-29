@@ -51,14 +51,15 @@ img{
     max-width: 100%;
     height: auto;
 }
-*{
-    box-sizing: border-box;
-    font-family: Microsoft JhengHei;
-}
+
 a{
     display: block;
     text-decoration: none;
 }
+
+/*****************/
+/* End CSS Reset */
+/*****************/
 
 .wrap{
     max-width: 1024px;
@@ -66,7 +67,14 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    font-family: Microsoft JhengHei;
+    overflow: hidden;
 }
+
+/**********/
+/* Header */
+/**********/
 
 .header{
     width: 100%;
@@ -94,19 +102,14 @@ a{
     color: #00aaec;
     background-image: url(../img/twitterIcon.png);
     background-repeat: no-repeat;
-    text-indent: 20%;
-    min-width: 80px;
+    text-indent: 25%;
+    min-width: 90px;
 }
 
 .logoAndMenu{
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
-}
-
-.logo{
-    display: flex;
-    justify-content: center;
 }
 
 .logo h1 a{
@@ -130,13 +133,12 @@ a{
     min-width: 100px;
     text-align: center;
     margin-left: 10px;
-    box-sizing: content-box;
     border-bottom: solid 5px #FFF;
+    line-height: 50px;
 }
 
 .menu ul li a{
     color: #00cc99;
-    line-height: 50px;
 }
 
 .menu ul li:hover{
@@ -154,11 +156,23 @@ a{
         padding-top: 10px;
     }
 
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
     .menu ul{
         flex-direction: column;
     }
-    
+
+    .menu ul li{
+        width: 50%;
+    }
 }
+
+/***********/
+/* Content */
+/***********/
 
 .content{
     width: 100%;
@@ -167,9 +181,19 @@ a{
     align-items: center;
 }
 
+/* banner */
+
 .banner{
     margin-bottom: 40px;
 }
+
+@media only screen and (max-width: 667px) {
+    .banner{
+        margin-bottom: 20px;
+    }
+}
+
+/* intro cards */
 
 .intro ul{
     display: flex;
@@ -182,11 +206,10 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     margin: 20px;
+    padding: 25px 20px;
+    border-radius: 1%;
     box-shadow: 0px 3px 5px #dbdbdb;
-    padding:25px 20px;
-    
 }
 
 @media only screen and (max-width: 667px) {
@@ -194,10 +217,13 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
 
     .intro ul li{
         width: 85%;
+        margin: 15px 10px;
+        padding: 10px 15px;
     }
 }
 
@@ -210,8 +236,7 @@ a{
 }
 
 .introDescription h2{
-    display: flex;;
-    justify-content: center;
+    text-align: center;
     font-size: 18px;
     font-weight: bold;
     line-height: 36px;
@@ -221,9 +246,11 @@ a{
     line-height: 24px;
 }
 
-.jQuery p {
+.jQuery p{
     margin-left: -10%;
 }
+
+/* table */
 
 .onlineVsOffline{
     width: 90%;
@@ -255,13 +282,24 @@ td{
     color: #00cc99;
 }
 
+@media only screen and (max-width: 667px) {
+    .onlineVsOffline{
+        margin-bottom: 30px;
+    }
+}
+
+
+/********/
+/* Form */
+/********/
+
 .form{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     min-height: 500px;
     background: linear-gradient(#00644b,#009872);
-    padding: 30px;
+    padding: 50px 50px 0px 50px;
 }
 
 .form h2{
@@ -282,6 +320,7 @@ td{
     width: 50%;
     min-height: 50%;
     margin-right: 30px;
+    padding-left: 10px;
     font-size: 20px;
     line-height: 24px;
     border: none;
@@ -300,10 +339,16 @@ td{
     line-height: 24px;
 }
 
+.form .information .formControl label{
+    margin-bottom: 5px;
+}
+
 .form .information .formControl input{
     width: 100%;
+    padding-left: 10px;
     margin-bottom: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 32px;
     border: none;
     border-radius: 3px;
 }
@@ -313,10 +358,13 @@ td{
     box-shadow: 0px 0px 10px #00cc99;
 }
 
+.form .information .formControl .submit{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .form .information .formControl .btnSubmit{
     width: 100px;
-    position: relative;
-    left: 78%;
     margin-bottom: unset;
     color:#FFF;
     font-size: 18px;
@@ -333,6 +381,15 @@ td{
 }
 
 @media only screen and (max-width: 667px) {
+    .form{
+        width: 100%;
+        padding: 30px 30px 0px 30px;
+    }
+
+    .form h2{
+        margin-bottom: 10px;
+    }
+
     .form .information{
         flex-direction: column;
         align-items: center;
@@ -341,30 +398,29 @@ td{
     #introdution{
         width: 75%;
         height: 100px;
-        margin-bottom: 30px;
+        margin-right: unset;
+        margin-bottom: 20px;
     }
 
     .form .information .formControl{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
-    }
-
-    .form .information .formControl{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
+        width: 75%;
         line-height: 24px;
     }
 
     .form .information .formControl input{
         width: 100%;
-        line-height: 24px;
+        margin-bottom: 10px;
     }
 
-    .form .information .formControl .btnSubmit{
-        position: unset;
+    .form .information .formControl .submit{
+        margin-bottom: 20px;
+    }
+    
+    .form .information .formControl .submit .btnSubmit{
+        padding: 5px;
     }
 }
 
@@ -378,6 +434,7 @@ td{
 .footerLogo a{
     width: 171px;
     height: 36px;
+    margin-left: 20px;
     background-image: url(../img/footerLogo.png);
     text-indent: 101%;
     overflow: hidden;
@@ -385,6 +442,7 @@ td{
 }
 
 .contactUs{
+    margin-right: 20px;
     line-height: 24px;
 }
 
@@ -400,6 +458,7 @@ td{
     
     .contactUs{
         line-height: 24px;
+        margin-right: unset;
         margin-bottom: 10px;
     }
 }

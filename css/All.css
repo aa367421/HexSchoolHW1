@@ -57,6 +57,11 @@ a{
     text-decoration: none;
 }
 
+*{
+    box-sizing: border-box;
+    font-family: 'Microsoft JhengHei' !important;
+}
+
 /*****************/
 /* End CSS Reset */
 /*****************/
@@ -67,8 +72,6 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
-    font-family: Microsoft JhengHei;
     overflow: hidden;
 }
 
